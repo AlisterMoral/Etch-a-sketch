@@ -60,4 +60,13 @@ resetBtn.addEventListener("click", () => {
 const randomBtn = document.getElementById("random-btn");
 randomBtn.addEventListener("click", () => {
   useRandomColor = !useRandomColor;
+  updateButtonStyle();
 });
+
+function updateButtonStyle() {
+  if (useRandomColor) {
+    randomBtn.textContent = "Black Button";
+  } else {
+    randomBtn.textContent = "Random Color Button";
+  }
+}
